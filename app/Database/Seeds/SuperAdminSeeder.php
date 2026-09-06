@@ -61,6 +61,18 @@ class SuperAdminSeeder extends Seeder
 
         $doctorId = $db->insertID();
 
+        // 4b. Create Doctor User Account for Login
+        $db->table('users')->insert([
+            'tenant_id'     => $tenantId,
+            'name'          => 'Dr. Tanvir Hasan',
+            'email'         => 'doctor@nurlab.com',
+            'password_hash' => password_hash('doctor123', PASSWORD_BCRYPT),
+            'role'          => 'doctor',
+            'phone'         => '01711223344',
+            'status'        => 'active',
+            'created_at'    => date('Y-m-d H:i:s'),
+        ]);
+
         // 5. Create Sample Patient for Tenant
         $db->table('patients')->insert([
             'tenant_id'    => $tenantId,
