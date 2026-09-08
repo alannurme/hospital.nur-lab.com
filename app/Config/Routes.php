@@ -32,7 +32,8 @@ $routes->group('superadmin', ['filter' => ['auth', 'superadmin']], function ($ro
 });
 
 // Tenant Protected Routes
-$routes->group('hospital', ['filter' => 'auth'], function ($routes) {
+$routes->group('hospital', ['filter' => ['auth', 'doctor']], function ($routes) {
+    $routes->get('/', 'Dashboard::index');
     $routes->get('dashboard', 'Dashboard::index');
 
     // Medical Departments

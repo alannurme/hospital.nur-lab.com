@@ -389,36 +389,6 @@
                     </div>
                 </a>
 
-                <!-- Role Workstations Accordion -->
-                <div>
-                    <div class="nav-link-custom <?= strpos(current_url(), 'panel') !== false ? 'active' : '' ?>" onclick="toggleSubMenu('rolePanelsMenu', this)">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-display-fill text-warning"></i>
-                            <span>Role Workstations</span>
-                        </div>
-                        <i class="bi bi-chevron-down small transition-transform"></i>
-                    </div>
-                    <div class="sub-menu <?= strpos(current_url(), 'panel') !== false ? 'show' : '' ?>" id="rolePanelsMenu">
-                        <a href="<?= base_url('hospital/panel/doctor') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/doctor') ? 'active' : '' ?>">
-                            <i class="bi bi-stethoscope"></i> Doctor Portal
-                        </a>
-                        <a href="<?= base_url('hospital/panel/receptionist') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/receptionist') ? 'active' : '' ?>">
-                            <i class="bi bi-headset"></i> Receptionist Desk
-                        </a>
-                        <a href="<?= base_url('hospital/panel/nurse') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/nurse') ? 'active' : '' ?>">
-                            <i class="bi bi-heart-pulse"></i> Nurse Station
-                        </a>
-                        <a href="<?= base_url('hospital/panel/pathologist') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/pathologist') ? 'active' : '' ?>">
-                            <i class="bi bi-journal-medical"></i> Pathologist Desk
-                        </a>
-                        <a href="<?= base_url('hospital/panel/pharmacist') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/pharmacist') ? 'active' : '' ?>">
-                            <i class="bi bi-capsule"></i> Pharmacist Desk
-                        </a>
-                        <a href="<?= base_url('hospital/panel/accountant') ?>" class="sub-link-custom <?= current_url() == base_url('hospital/panel/accountant') ? 'active' : '' ?>">
-                            <i class="bi bi-receipt"></i> Accountant Console
-                        </a>
-                    </div>
-                </div>
 
                 <!-- Patients Accordion -->
                 <div>
